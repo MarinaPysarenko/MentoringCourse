@@ -11,7 +11,6 @@
             <driver.version>4.1.2</driver.version>
             <selenium.baseUrl></selenium.baseUrl>
             <selenium.browser></selenium.browser>
-            <selenium.properties>selenium.properties</selenium.properties>
             <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
             <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
             <maven.compiler.source>17</maven.compiler.source>
@@ -35,14 +34,11 @@
                                 <value>false</value>
                             </property>
                             <property>
-                                <name>listener</name>
-                                <value>com.dataart.selenium.framework.MyListener</value>
                             </property>
                         </properties>
                         <systemPropertyVariables>
                             <selenium.baseUrl>${selenium.baseUrl}</selenium.baseUrl>
                             <selenium.browser>${selenium.browser}</selenium.browser>
-                            <selenium.properties>${selenium.properties}</selenium.properties>
                         </systemPropertyVariables>
                     </configuration>
                 </plugin>
@@ -60,7 +56,6 @@
                     <artifactId>allure-maven</artifactId>
                     <version>2.10.0</version>
                     <configuration>
-                        <reportVersion>${allure-testng-version}</reportVersion>
                         <resultsDirectory>allure-results</resultsDirectory>
                     </configuration>
                 </plugin>
